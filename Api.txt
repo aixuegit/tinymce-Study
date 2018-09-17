@@ -1,0 +1,44 @@
+/*plugins 插件 用空格分开
+ *
+ * print 打印
+ * preview 预览
+ * fullpage 文档属性
+ * powerpaste 外部文档转换  无
+ * searchreplace 搜索与替换
+ * autolink 自动加链接
+ * directionality 文字方向 toolbar1：ltr rtl
+ * advcode 代码编写插件 无
+ * visualblocks 显示出块级元素
+ * visualchars 显示出隐藏字符
+ * fullscreen 全屏显示
+ * image 图片插入与编辑
+ * link 超链接
+ * media 多媒体
+ * template 插入模板
+ * codesample 代码示例
+ * table 表格 
+ * charmap 特殊符号
+ * hr 水平分割线
+ * pagebreak 分页符
+ * nonbreaking 不间断空格
+ * anchor 锚点
+ * toc 内容列表
+ * insertdatetime 插入日期
+ * advlist 项目编号 
+ * lists 列表规范
+ * textcolor 文本颜色 toolbar1: forecolor backcolor
+ * wordcount 计算字符数
+ * tinymcespellchecker 拼写检查  无
+ * a11ychecker
+ * imagetools 图片编辑
+ * mediaembed 媒体
+ * linkchecker 无
+ * colorpicker 颜色选择
+ * 
+ *默认 toolbar
+ * bold 粗体  italic 斜体 strikethrough 删除线 
+ * alignleft 左对齐  aligncenter 居中  alignright 右对齐  alignjustify 两端对齐
+ * outdent 减少缩进  indent 增加缩进
+ * formatselect 文字大纲
+ * removeformat 清除格式
+ */

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TinyMCE</title>
+		<link rel="stylesheet" type="text/css" href="css/Commont.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<!--<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=7v5llkuc7gogobsjhuak4r0oy4iri2w5q38qyo50fj9ew425" type="text/javascript" charset="utf-8"></script>-->
+		<script src="tinymce/tinymce.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="Element-ui@2.0.8/index.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#Editor_Alert_Mce_0{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				z-index: 1000;
+				background: rgba(0,0,0,0.3);					
+			}
+			#Editor_Alert_Mce_0 .Editor_Alert_Mce_0_Content_Box{
+				width: 70%;
+				height: 70%;
+				background: #FFFFFF;
+				border-radius: 10px;
+				box-sizing: border-box;
+				padding: 20px;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				margin: auto;
+			}
+			#Editor_Alert_Mce_0 .Editor_Alert_Mce_0_title{
+				width: 100%;
+				margin: 0px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 14px;
+				text-align: center;
+				box-sizing: border-box;
+				padding: 0px 10px;
+			}
+			#Editor_Alert_Mce_0 .Editor_Alert_Mce_0_content{
+				flex: 1;
+				width: 100%;
+			}
+			
+			#Editor_Alert_Mce_0 .Editor_Alert_Mce_0_foot{
+				width: 100%;
+				height: 50px;
+				overflow: hidden;
+				box-sizing: border-box;
+				padding: 5px 10px;
+				margin: 0px;
+			}
+			#Editor_Alert_Mce_0 .Editor_Alert_Mce_0_foot button{
+				width: auto;
+				height: 40px;
+				line-height: 40px;
+				box-sizing: border-box;
+				float: right;
+				font-size: 18px;
+				margin-left: 20px;
+				padding: 0px 20px;
+				cursor: pointer;
+				color: #FFFFFF;
+				background: #FF0000;
+				outline: none;
+				border: none;
+				border-radius: 5px;
+			}
+			#Editor_Alert_Mce_0 .Editor_Alert_Mce_0_foot button:first-child:hover{
+				background: #339AE9;
+			}
+			#Editor_Alert_Mce_0 .Editor_Alert_Mce_0_foot button:first-child{
+				background: #3399FF;
+			}
+		</style>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="Editor">
+			
+		</div>
+		<script type="text/javascript">
+			function Upload(Editor){
+				Editor.insertContent('<img src="image/img_the_scream.jpg">');
+				var ed = new tinymce.Editor('mceu_0', {
+					    some_setting: 1
+				}, tinymce.EditorManager);
+				console.log(ed);
+			}
+			
+			function AddPicAlert(){
+				var Alert = 
+				document.getElementsByTagName("body")[0].appendChild();
+			}
+			// 
+			/*
+			 * content 的值可为 file edit insert format tools table help "",default:false,
+			 * icon Boolean default:true,
+			 * image String
+			 * handler: 点击事件
+			 * position [第几行,第几个]， 
+			 * */
+			var option = {
+				bar:[
+					{
+						text:'上传文件',
+						name:'upload',
+						icon:true,
+						image:"./image/img_the_scream.jpg",
+						content:'',
+						position: '',
+						handler:function(editor){
+							editor.insertContent('&nbsp;Here\'s some content!&nbsp;');
+							console.log(editor);
+						}
+					},
+					
+				]
+			};
+			SettingTinymce("Editor",option);
+		</script>
+		<!--<div id="Editor_Alert_Mce_0">
+			<div class="Editor_Alert_Mce_0_Content_Box">
+				<h2 class="Editor_Alert_Mce_0_title">我的磁盘</h2>
+				<div class="Editor_Alert_Mce_0_content">
+					
+				</div>
+				<div class="Editor_Alert_Mce_0_foot">
+					<button>确定</button>
+					<button>取消</button>
+				</div>
+			</div>
+		</div>-->
+	</body>
+</html>
